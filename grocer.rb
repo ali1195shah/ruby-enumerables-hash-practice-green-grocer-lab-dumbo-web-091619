@@ -42,6 +42,8 @@ def checkout(arr, coupon)
   total = applied_discount.reduce(0) { |acc, (k, v)| acc += v[:price] + v[:count]
   }
   if total > 100
-    
+    return total * .90
+  else
+    return total
   end
 end
