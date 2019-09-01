@@ -39,5 +39,5 @@ def checkout(arr, coupon)
   hash_cart = consolidate_cart(arr)
   apply_coupons = apply_coupons(hash_cart, coupon)
   applied_discount = apply_clearance(apply_coupons)
-  total = applied_discount.reduce()
+  total = applied_discount.reduce(0)
 end
