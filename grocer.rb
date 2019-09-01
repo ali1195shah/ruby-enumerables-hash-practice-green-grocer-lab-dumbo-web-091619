@@ -35,8 +35,8 @@ def apply_clearance(cart)
   return cart
 end
 
-def checkout(arr, coupon)
-  hash_cart = consolidate_cart(arr)
+def checkout(array, coupon)
+  hash_cart = consolidate_cart(array)
   apply_coupons = apply_coupons(hash_cart, coupon)
   applied_discount = apply_clearance(apply_coupons)
   total = applied_discount.reduce(0) { |acc, (k, v)| acc += v[:price] + v[:count]
