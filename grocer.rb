@@ -38,7 +38,7 @@ end
 def checkout(cart, coupons)
   hash_cart = consolidate_cart(cart)
   applied_coupons = apply_coupons(hash_cart, coupons)
-  applied_discount = apply_clearance(apply_coupons)
+  applied_discount = apply_clearance(applied_coupons)
   total = applied_discount.reduce(0) { |acc, (key, value)| acc += value[:price] + value[:count]}
   if total > 100
     return total * 0.90
