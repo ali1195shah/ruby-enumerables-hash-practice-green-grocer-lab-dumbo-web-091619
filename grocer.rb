@@ -41,4 +41,7 @@ def checkout(arr, coupon)
   applied_discount = apply_clearance(apply_coupons)
   total = applied_discount.reduce(0) { |acc, (k, v)| acc += v[:price] + v[:count]
   }
+  if total > 100
+    
+  end
 end
